@@ -82,3 +82,49 @@
 		transform: translateY(3px);
 	}
 }
+@media screen and (max-width: 1038px) {
+	.hero {
+		padding: 52px 0 15px;
+		&__container {
+			flex-wrap: wrap;
+		}
+		&__photo-wrapper {
+			min-width: 100%;
+		}
+
+		&__photo {
+			background: url("../img/hero-profile-tablet.png") center center / cover no-repeat;
+		}
+
+		&__info {
+			padding-left: 0;
+		}
+		.hero-info {
+			&__title {
+				margin-top: 65px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.hero {
+		padding: 52px 0 17px;
+		&__photo-wrapper {
+			width: 100%;
+			min-height: 100%;
+		}
+
+		&__photo {
+			background: url("../img/hero-profile.png") center center / cover no-repeat;
+		}
+	}
+	.hero-info {
+		&__title {
+			margin-top: 62px;
+		}
+		&__btn {
+			margin-top: 20px;
+			width: 100%;
+		}
+	}
+}

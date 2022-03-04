@@ -502,6 +502,8 @@ input[type="number"]::-webkit-outer-spin-button {
   max-width: 1038px;
   margin: 0 auto;
   padding: 0 30px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .wrapper {
@@ -640,10 +642,63 @@ input[type="number"]::-webkit-outer-spin-button {
           transform: translateY(3px);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1038px) {
   .container {
     max-width: 762px;
     padding: 0 30px;
+  }
+
+  .hero {
+    padding: 52px 0 15px;
+  }
+
+  .hero__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .hero__photo-wrapper {
+    min-width: 100%;
+  }
+
+  .hero__photo {
+    background: url("../img/hero-profile-tablet.png") center center/cover no-repeat;
+  }
+
+  .hero__info {
+    padding-left: 0;
+  }
+
+  .hero .hero-info__title {
+    margin-top: 65px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 17px;
+  }
+
+  .hero {
+    padding: 52px 0 17px;
+  }
+
+  .hero__photo-wrapper {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  .hero__photo {
+    background: url("../img/hero-profile.png") center center/cover no-repeat;
+  }
+
+  .hero-info__title {
+    margin-top: 62px;
+  }
+
+  .hero-info__btn {
+    margin-top: 20px;
+    width: 100%;
   }
 }
 
@@ -666,10 +721,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .hero__photo{background:url("../img/hero-profile.webp")}
 }
 
- @media screen and (max-width: 900px){
+ @media screen and (max-width: 1038px){
 
 @supports (-webkit-appearance:none){
+.hero__photo{background:url("../img/hero-profile-tablet.webp") center center/cover no-repeat}
+}
 
+}
+
+ @media screen and (max-width: 500px){
+
+@supports (-webkit-appearance:none){
+.hero__photo{background:url("../img/hero-profile.webp") center center/cover no-repeat}
 }
 
 }
