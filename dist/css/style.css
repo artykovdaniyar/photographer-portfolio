@@ -139,6 +139,10 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   font-style: normal;
 }
+
+.main {
+  background: #272a2f;
+}
 @supports (-webkit-appearance:none){
 
 }
