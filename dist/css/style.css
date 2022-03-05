@@ -144,6 +144,64 @@ input[type="number"]::-webkit-outer-spin-button {
   color: white;
   background: #272a2f;
 }
+
+.portfolio {
+  padding: 52px 0 99px;
+}
+
+.portfolio__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.01em;
+}
+
+.portfolio__descr {
+  margin-top: 15px;
+  max-width: 766px;
+}
+
+.portfolio__gallery {
+  margin-top: 28px;
+}
+
+.portfolio-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20.35px;
+}
+
+.portfolio-gallery__item {
+  width: 244.24px;
+  height: 244.24px;
+}
+
+.portfolio-gallery__link {
+  background: #324b53;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.portfolio-gallery__photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.portfolio-gallery__photo:hover {
+  -webkit-transform: rotate(6deg) scale(1.1);
+      -ms-transform: rotate(6deg) scale(1.1);
+          transform: rotate(6deg) scale(1.1);
+}
 @supports (-webkit-appearance:none){
 
 }
