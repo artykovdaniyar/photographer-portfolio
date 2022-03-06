@@ -41,6 +41,8 @@
 	},
 	"description": "Orale project",
 	"dependencies": {
-		"lb-gulp-es2015": "^1.0.24"
+		"jquery": "^3.6.0",
+		"lb-gulp-es2015": "^1.0.24",
+		"magnific-popup": "^1.1.0"
 	}
 }

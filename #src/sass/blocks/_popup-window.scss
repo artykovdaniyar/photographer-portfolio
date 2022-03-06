@@ -1,0 +1,186 @@
+.overlay {
+	position: fixed;
+	display: block;
+	width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	overflow: hidden;
+	position: fixed;
+	background: rgb(25, 132, 155);
+	transition: all 0.5s;
+	pointer-events: none;
+}
+.overlay.active {
+	opacity: 0.3;
+	pointer-events: all;
+	z-index: 3;
+}
+.popup-window {
+	padding: 49px 44px;
+	color: #fff;
+	position: absolute;
+	width: 656px;
+	left: 50%;
+	top: -100%;
+	transform: translate(-50%, -50%);
+	background: #272a2f;
+
+	&.active {
+		animation: 0.8s bounceInDown;
+		top: 50%;
+		z-index: 5;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		letter-spacing: 0.01em;
+	}
+
+	&__descr {
+		margin-top: 15px;
+		font-size: 16px;
+		line-height: 18px;
+		letter-spacing: 0.01em;
+	}
+
+	&__form {
+		margin-top: 26px;
+	}
+	&__inputs {
+		display: flex;
+		flex-wrap: wrap;
+		border: none;
+	}
+	&__input {
+		font-size: 16px;
+		line-height: 18px;
+		letter-spacing: 0.01em;
+		padding: 16px;
+		border: none;
+		background: #324b53;
+		color: #fff;
+		flex-grow: 1;
+		&::-webkit-input-placeholder {
+			color: #8ea5ac;
+		}
+		&::-moz-placeholder {
+			color: #8ea5ac;
+		}
+		&:-moz-placeholder {
+			color: #8ea5ac;
+		}
+		&:-ms-input-placeholder {
+			color: #8ea5ac;
+		}
+	}
+	&__input[name="name"] {
+		font-size: 16px;
+		line-height: 18px;
+		letter-spacing: 0.01em;
+		max-width: 200px;
+		margin-right: 20px;
+	}
+	&__textarea {
+		color: #fff;
+		margin-top: 20px;
+		font-size: 16px;
+		line-height: 18px;
+		letter-spacing: 0.01em;
+		display: block;
+		padding: 16px 22px;
+		border: none;
+		background: #324b53;
+		width: 100%;
+		min-height: 219px;
+		resize: vertical;
+		&::-webkit-input-placeholder {
+			color: #8ea5ac;
+		}
+		&::-moz-placeholder {
+			color: #8ea5ac;
+		}
+		&:-moz-placeholder {
+			color: #8ea5ac;
+		}
+		&:-ms-input-placeholder {
+			color: #8ea5ac;
+		}
+	}
+	&__input:focus,
+	&__textarea:focus {
+		outline: none;
+		background: #114e5c;
+	}
+	&__btn {
+		margin-top: 26px;
+		padding: 14px 32px;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: center;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		background: transparent;
+		color: #fff;
+		border: 2px solid #ffffff;
+		transition: background 0.3s, border 0.3s;
+	}
+	&__btn:active {
+		transform: translateY(3px);
+	}
+	&__btn:hover {
+		background: #19849b;
+		border: 2px solid #19849b;
+	}
+}
+@media screen and (max-width: 768px) {
+	.popup-window {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 620px) {
+	.popup-window {
+		padding: 25px 20px;
+		&__form {
+			margin-top: 15px;
+		}
+		&__inputs {
+			flex-direction: column;
+		}
+		&__input {
+			font-size: 16px;
+			padding: 12px;
+		}
+		&__input[name="name"] {
+			max-width: 100%;
+			flex-grow: 1;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		&__textarea {
+			padding: 12px;
+			min-height: 130px;
+			margin-top: 10px;
+		}
+		&__btn {
+			margin-top: 15px;
+			padding: 10px 15px;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 21px;
+			text-align: center;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			background: transparent;
+			color: #fff;
+			border: 2px solid #ffffff;
+			transition: background 0.3s, border 0.3s;
+		}
+	}
+}
