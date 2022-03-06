@@ -138,6 +138,34 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: 700;
   font-style: normal;
 }
+
+.header {
+  width: 100%;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 0;
+  height: 58px;
+  background: #19849b;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 @supports (-webkit-appearance:none){
 
 }
