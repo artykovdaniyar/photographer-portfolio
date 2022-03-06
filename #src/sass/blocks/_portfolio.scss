@@ -29,21 +29,53 @@
 	}
 
 	&__link {
+		position: relative;
 		background: #324b53;
 		width: 100%;
 		height: 100%;
 		display: block;
 		overflow: hidden;
 	}
-
+	&__link::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		background: rgb(25, 132, 155);
+		z-index: 3;
+		pointer-events: none;
+		transition: opacity 0.3s;
+	}
+	&__link:hover {
+		&::before {
+			opacity: 0.5;
+		}
+		.portfolio-gallery__icon-zoom {
+			opacity: 1;
+		}
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__icon-zoom {
+		opacity: 0;
+		z-index: 4;
+		transition: opacity 0.3s;
+	}
 	&__photo {
+		position: relative;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		transition: all 0.3s linear;
-	}
-	&__photo:hover {
-		transform: rotate(6deg) scale(1.1);
+		z-index: 2;
 	}
 }
 @media screen and (max-width: 1038px) {
@@ -64,6 +96,14 @@
 }
 @media screen and (max-width: 400px) {
 	.portfolio-gallery {
+		&__link:hover {
+			&::before {
+				opacity: 0;
+			}
+			.portfolio-gallery__icon-zoom {
+				opacity: 0;
+			}
+		}
 		&__item {
 			width: 100%;
 		}
